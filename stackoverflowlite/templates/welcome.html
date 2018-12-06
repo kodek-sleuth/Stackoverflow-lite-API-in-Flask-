@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Stackover flow Lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='bootstrap.css')}}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='mainwelcome.css')}}" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+<div>
+<nav class="navbar navbar-expand-md navbar-light bg-success sticky-top">
+            <img src="{{ url_for('static', filename='stacklite.png')}}" class="stack" />
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                            <a class="nav-link btn btn-outline-warning btn-xs" href="Login" >
+                                Log in
+                            </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link btn btn-info btn-xs" href="SignUp" >
+                                SignUp
+                            </a>
+                    </li>
+                </ul>
+            </div>
+</nav>
+</div>
+    <h1>Hello World</h1>
+</body>
