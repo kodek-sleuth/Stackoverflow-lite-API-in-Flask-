@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome to Stackover flow Lite</title>
@@ -29,6 +30,14 @@
                 </ul>
             </div>
 </nav>
+
 </div>
-    <h1>Hello World</h1>
+
+    <div>
+        {% include "flashmessages.html"%}
+        {%block content%}{% endblock %}
+    </div>
+
+    
 </body>
+</html>
