@@ -1,31 +1,57 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Blog.org</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='bootstrap.css')}}" />
-    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='signup.css')}}" />
-    <script src="main.js"></script>
-</head>
-
-<body>
-   <div>
-       <nav class="navbar navbar-expand-md navbar-light bg-warning sticky-top">
-            <img src="{{url_for('static', filename='stacklite.png')}}" class="stack">
-       </nav>
-   </div>
+{% extends "welcome.html" %}
+{% block content%}
+{% from "formhelpers.html" import render_field%}
 
    <div class="firstwrapper">
-       <div>
+       <div class="image">
            <img src="{{ url_for('static', filename='Join the team.gif')}}">
        </div>
-       <div>
-           <form action="" >
+    
+    
+    <div class="form">
+    <form  action="" method="POST" >
+        <div class="text">
+            <h3 class="display-4 head">
+                Join Now <hr> 
+            </h3>
+        </div> 
+        <div class="form-group">
+            {{render_field(form.firstname, class_="formitem")}}
+        </div>
+        <div class="form-group">
+            {{render_field(form.lastname, class_="formitem")}}
+        </div>
 
-           </form>
-       </div>
+        <div class="form-group">
+            {{render_field(form.country, class_="formitem")}}
+        </div>
+
+        <div class="form-group">
+            {{render_field(form.linkedIn, class_="formitem")}}
+        </div>
+
+        <div class="form-group">
+            {{render_field(form.email, class_="formitem")}}
+        </div>
+
+        <div class="form-group">
+            {{render_field(form.username, class_="formitem")}}
+        </div>
+
+        <div class="form-group">
+            {{render_field(form.password, class_="formitem")}}
+        </div>
+
+        <div class="form-group">
+            {{render_field(form.confirm_password)}}
+        </div>
+
+        <div>
+            <p>
+                <input class="btn btn-success" type="submit" value="Submit">
+            </p>
+        </div>
+        </form>
+    </div>
    </div>
-</body>
-</html>
+{% endblock  %}
