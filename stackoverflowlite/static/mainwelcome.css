@@ -3,6 +3,7 @@ body
     width: 100%;
     height: 100%;
     font-size: 20px;
+    background: #f7f8f5;
 }
 li
 {
@@ -12,4 +13,41 @@ li
 {
     width: 300px;
     height: 100px;
+}
+.firstwrapper
+{
+    display: grid;
+    grid-template-rows: 10% 80%;
+    grid-row-gap: 40px;
+    justify-items: center;
+}
+
+.formitem
+{
+    padding-top: 10px;
+}
+.image
+{
+    padding-top: 20px;
+}
+.formitem1
+{
+    display: block;
+    width:300px;
+}
+.image
+{
+    height: 100px;
+}
+footer
+{
+    background-color: brown;
+}
+.listwrap .listitem
+{
+    display: inline;
+}
+.listitem
+{
+    padding-left: 30px;
 }

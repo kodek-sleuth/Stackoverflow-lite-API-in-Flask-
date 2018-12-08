@@ -13,31 +13,39 @@
 
 <body>
 <div>
-<nav class="navbar navbar-expand-md navbar-light bg-success sticky-top">
-            <img src="{{ url_for('static', filename='stacklite.png')}}" class="stack" />
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ">
-                            <a class="nav-link btn btn-outline-warning btn-xs" href="Login" >
-                                Log in
-                            </a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link btn btn-info btn-xs" href="SignUp" >
-                                SignUp
-                            </a>
-                    </li>
-                </ul>
-            </div>
-</nav>
 
+{% include "navbarwelcomepage.html" %}
 </div>
 
     <div>
         {% include "flashmessages.html"%}
         {%block content%}{% endblock %}
+        <img
     </div>
-
-    
 </body>
+<footer>
+    <div>
+        <ul class="listwrap">
+            <li class="listitem">
+                FAQS
+            </li>
+
+            <li class="listitem">
+                Twitter
+            </li>
+
+            <li class="listitem">
+                Youtube
+            </li>
+
+            <li class="listitem">
+                Email
+            </li>
+
+            <li class="listitem">
+                Privacy Policy
+            </li>
+        </ul>
+    </div>
+</footer>
 </html>
