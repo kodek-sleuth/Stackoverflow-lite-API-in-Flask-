@@ -41,13 +41,30 @@ li
 }
 footer
 {
+    margin-top: 20px;
     background-color: brown;
+    height: 50px;
+    
 }
 .listwrap .listitem
 {
     display: inline;
+    
 }
+
 .listitem
 {
-    padding-left: 30px;
+    padding-left: 90px;
+    
+}
+.image-resize
+{
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.but
+{
+    padding-top: 10px;
 }
