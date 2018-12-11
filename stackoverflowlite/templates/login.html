@@ -7,10 +7,10 @@
         </div>
         <div class="form-group">
 
-            <form action="" method="POST">
+            <form action="" method="POST" class="formbody card card-body ">
                 <legend> Log into your Stackoverflow Account <hr> </legend>
                 <div class="formitem">
-                    {{form.username.label(class="form-control-label")}}
+                    {{form.username.label(class="form-control-label ")}}
                     {% if form.username.errors %}
                         {{form.username(class="form-control form-control-lg ")}}
                         <div class="invalid-feedback">
@@ -20,7 +20,7 @@
                         </div>
     
                     {% else %}
-                        {{form.username(class="form-control form-control-lg")}}
+                        {{form.username(class="form-control form-control-lg ")}}
                     {% endif %}
                 </div>
                 <div class="formitem">
