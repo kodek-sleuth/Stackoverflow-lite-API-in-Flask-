@@ -3,7 +3,42 @@ body
     height: 100%;
     width: 100%;
 }
-.nav-item
+.image
 {
-    padding-left: 20px;
+    width: 200px;
+}
+nav
+{
+    background: #17a2b8;
+}
+.firstbox
+{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding-top: 20px;
+    grid-column-gap: 40px;
+}
+ul li
+{
+    display: block;
+}
+ul
+{
+    padding-left: 5px;
+}
+li
+{
+    padding-bottom: 20px;
+}
+.minibox
+{
+    text-align: center;
+}
+a 
+{
+    color: black;
+}
+a:hover
+{
+    color: brown;
 }
