@@ -25,25 +25,26 @@
                 <li>
                     <a href="{{url_for('Profile')}}" class="listitem3">Your Profile</a>
                 </li>
+                <li>
+                    <h4 class="card minibox">Learn More</h4>
+                </li>
             </ul>
-
-            <div class="card minibox">
-                <h4>Learn More</h4>
-            </div>
         </div>
+
         <div class="questions">
-                <div>
+                <div  class="questionborder">
                     <p>
                         <h3>
                             Top Questions
                         </h3>
-                        <h3 class="btn btn-info">
-                            Ask a Question
-                        </h3>
                     </p>
+                </div>
+                <div class="asker askerborder" >
+                    <h3 class="btn btn-info">
+                        <a href="{{url_for('askquestion')}}" class="ask">Ask a Question</a>
+                    </h3>
                 </div>
             </div>
     </div>
-    
 </body>
 </html>

@@ -14,9 +14,7 @@ nav
 .firstbox
 {
     display: grid;
-    grid-template-columns: 20% 80%;
-    padding-top: 20px;
-    grid-column-gap: 40px;
+    grid-template-columns: 15% 60%;
 }
 ul li
 {
@@ -25,14 +23,17 @@ ul li
 ul
 {
     padding-left: 5px;
+    padding-top: 20px;
 }
 li
 {
     padding-bottom: 20px;
+    
 }
 .minibox
 {
     text-align: center;
+    width: 150px;
 }
 a 
 {
@@ -41,4 +42,44 @@ a
 a:hover
 {
     color: brown;
+}
+.ask
+{
+    color: aliceblue;
+}
+.ask:hover
+{
+    text-decoration: none;
+    color: brown;
+}
+.but
+{
+    padding-top: 10px;
+}
+.questions
+{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding-top: 20px;
+    grid-auto-rows: 100px;
+    padding-left: 10px;
+}
+.questionborder
+{
+    border-bottom: 1px solid gray;
+}
+.askerborder
+{
+    border-bottom: 1px solid gray;
+}
+.firstcolumn
+{
+    display: grid;
+    grid-auto-rows: 400px;
+    border-right: 1px solid gray;
+}
+.formbody
+{
+    padding-left: 50px;
+    padding-top: 30px;
 }
