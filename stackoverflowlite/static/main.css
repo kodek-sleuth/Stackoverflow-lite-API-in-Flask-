@@ -14,7 +14,7 @@ nav
 .firstbox
 {
     display: grid;
-    grid-template-columns: 15% 60%;
+    grid-template-columns: 15% 70%;
 }
 ul li
 {
@@ -37,7 +37,7 @@ li
 }
 a 
 {
-    color: black;
+    color: rgb(31, 30, 30);
 }
 a:hover
 {
@@ -59,10 +59,10 @@ a:hover
 .questions
 {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 70% 20%;
     padding-top: 20px;
     grid-auto-rows: 100px;
-    padding-left: 10px;
+    margin-left: 30px;
 }
 .questionborder
 {
@@ -82,4 +82,75 @@ a:hover
 {
     padding-left: 50px;
     padding-top: 30px;
+}
+footer
+{
+    margin-top: 10px;
+    background-color: brown;
+    height: 50px;
+    
+}
+.ninthwrapper
+{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-auto-rows: 270px;
+    background: #136983;
+    color: rgb(31, 30, 30);
+}
+.titleup
+{
+    padding-top: 10px;
+}
+.Questionbodyandanswer
+{
+    padding-left: 10px;
+}
+.cardcolor
+{
+    background: #fd7e14;
+}
+.questiontags
+{
+    color: #dc3545;
+}
+.questiontags:hover
+{
+    color: #17a2b8;
+}
+.questiontitlecolor
+{
+    background: #20c997;
+}
+.nav-item
+{
+    margin-left: 20px;
+}
+.cardcolor1
+{
+    background: #6f42c1;
+}
+.profile
+{
+    margin-left: 20px;
+}
+.profilenav
+{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    border-bottom: 1px solid gray;
+}
+.updateprofiletab
+{
+    margin-top: 10px;
+}
+.usernameprofile
+{
+    margin-top: 20px;
+}
+.userquestions
+{
+    margin-top: 10px;
 }

@@ -10,6 +10,8 @@
     <script src="main.js"></script>
 </head>
 <body>
+    <script src="{{url_for('static', filename='ckeditor.js')}}"></script>
+    <script type="text/javascript"> CKEDITOR.replace('editor')</script>
     {% include "navbarhomepage.html"%}
     <div class="firstbox">
             <div class="firstcolumn">
@@ -50,7 +52,7 @@
                 <div class="formitem">
                     {{form.Body.label(class="form-control-label")}}
                     {% if form.Body.errors %}
-                        {{form.Body(class="form-control form-control-lg ")}}
+                        {{form.Body(class="form-control form-control-lg")}}
                         <div class="invalid-feedback">
                             {% for error in form.Body.errors %}
                                 <span>{{ error }}</span>
@@ -69,4 +71,6 @@
 
     </div> 
 </body>
+    {%include "footerhomepage.html"%}
+
 </html>

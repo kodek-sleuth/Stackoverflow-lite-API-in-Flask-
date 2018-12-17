@@ -25,13 +25,42 @@
                 <li>
                     <a href="{{url_for('Profile')}}" class="listitem3">Your Profile</a>
                 </li>
+                <li>
+                    <h4 class="card minibox">Learn more</h4>
+                </li>
             </ul>
+        </div>
+        <div class="profile">
+            <div class="profilenav">
+                <div class="usernameprofile">
+                    <h1>{{user.username}}</h1>
+                </div>
 
-            <div class="card minibox">
-                <h4>Learn More</h4>
+                <div class="updateprofiletab">
+                    <ul>
+                        <li class="btn btn-success">
+                            Update Profile
+                        </li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="userquestions">
+                {% for i in user.question%}
+                    <h5 class="card card-body cardcolor">
+                        <a>
+                        {{i}}
+                        </a>
+                        <ul>
+                            <li class="btn btn-danger">
+                                <a href="{{url_for('deletequestion', deletequestion_title=i)}}">Delete</a>
+                            </li>
+                        </ul>
+                    </h5>      
+                {% endfor %}
+            </div>          
         </div>
     </div>
-    
 </body>
+    {%include "footerhomepage.html"%}
 </html>

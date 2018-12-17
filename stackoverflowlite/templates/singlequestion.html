@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stackover Flow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='bootstrap.css')}}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='main.css')}}" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% include "navbarhomepage.html"%}
+    <div class="firstbox">
+        <div class="firstcolumn">
+            <ul>
+                <li>
+                    <a href="{{url_for('Home')}}" class="listitem2">Home</a> 
+                </li>
+
+                <li>
+                    <a href="{{url_for('Users')}}" class="listitem2">Users</a>
+                </li>
+
+                <li>
+                    <a href="{{url_for('Profile')}}" class="listitem3">Your Profile</a>
+                </li>
+                <li>
+                    <h4 class="card minibox">Learn More</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="Questionbodyandanswer">
+            <h4 class="questiontitlecolor"><hr>{{singlequestion.Title}} by <small>{{singlequestion.Author}} on {{singlequestion.Date_posted.strftime('%Y-%m-%d')}}</small><hr></h4>
+            <h6 class="card card-body cardcolor">{{singlequestion.Content}}</h6>
+            <h6 class="card card-body cardcolor1">
+                    {% for i in questions.answers %}
+                        {{i}}
+                    {% endfor %} 
+            </h6>
+            <div class=" Answertextbox">
+                    <form action="" method="POST" class="formbody card card-body ">
+                            <div class="formitem">
+                                {{form.Body.label(class="form-control-label ")}}
+                                {% if form.Body.errors %}
+                                    {{form.Body(class="form-control form-control-lg ")}}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.Body.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor%}
+                                    </div>
+                
+                                {% else %}
+                                    {{form.Body(class="form-control form-control-lg ")}}
+                                {% endif %}
+                            </div>
+
+                            <div class="but">
+                                {{form.submit(class="btn btn-info")}}
+                            </div>
+                            </form>
+                        </div>
+                </div>
+        </div>
+
+    </div>
+    
+    {% include "footerhomepage.html"%}
+</body>
+</html>

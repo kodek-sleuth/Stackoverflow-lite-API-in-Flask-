@@ -52,7 +52,7 @@ li
 }
 footer
 {
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: brown;
     height: 50px;
     
@@ -78,4 +78,25 @@ footer
 .but
 {
     padding-top: 10px;
+}
+.ninthwrapper
+{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-auto-rows: 270px;
+    background: #343a40;
+}
+a 
+{
+    color:#1a2a3a ;
+}
+a:hover
+{
+    color: brown;
+}
+.here
+{
+    color: #e83e8c;
 }

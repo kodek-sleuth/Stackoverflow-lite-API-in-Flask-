@@ -44,7 +44,19 @@
                         <a href="{{url_for('askquestion')}}" class="ask">Ask a Question</a>
                     </h3>
                 </div>
+                {% for question in questions %}
+                <div class="questioncolor">
+                    <h5><hr><a href="{{url_for('singlequestion', singlequestion_id=question.id)}}" class="questiontags">{{question.Title}}</a><hr></h5>
+                </div>
+                
+                <div class="authortag">
+                    <h5><hr>{{question.Author}}<hr></h5>
+                </div>
+                {% endfor %}
             </div>
+            {% block content %}{% endblock %}
     </div>
+    
+    {% include "footerhomepage.html"%}
 </body>
 </html>

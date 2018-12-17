@@ -7,4 +7,23 @@
                     <span class="navbar-toggler-icon">
                     </span>
                 </button>
+                <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-warning" href="{{url_for('askquestion')}}" >
+                                Ask a Question
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-primary" href="{{url_for('Profile')}}" >
+                                Your Profile
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                                <a class="nav-link btn btn-danger" href="{{url_for('Logout')}}" >
+                                    Logout
+                                </a>
+                            </li>
+                    </ul>
+
 </nav>
