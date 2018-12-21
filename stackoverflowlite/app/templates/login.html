@@ -1,0 +1,49 @@
+{% extends "welcome.html"%}
+{% block content %}
+<div>
+    <div class="firstwrapper">
+        <div>
+            <img src="{{ url_for('static', filename='Join the team.gif')}}">
+        </div>
+        <div class="form-group">
+
+            <form action="" method="POST" class="formbody card card-body ">
+                <legend> Log into your Stackoverflow Account <hr> </legend>
+                <div class="formitem">
+                    {{form.username.label(class="form-control-label ")}}
+                    {% if form.username.errors %}
+                        {{form.username(class="form-control form-control-lg ")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor%}
+                        </div>
+    
+                    {% else %}
+                        {{form.username(class="form-control form-control-lg ")}}
+                    {% endif %}
+                </div>
+                <div class="formitem">
+                    {{form.password.label(class="form-control-label")}}
+                    {% if form.password.errors %}
+                        {{form.password(class="form-control form-control-lg ")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor%}
+                        </div>
+    
+                    {% else %}
+                        {{form.password(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="but">
+                    {{form.submit(class="btn btn-success")}}
+                    <small>Do not have account click <a href="{{url_for('SignUp')}}" class="here">here</a></small>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

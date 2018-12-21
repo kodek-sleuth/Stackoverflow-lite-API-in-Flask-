@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stackover Flow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='bootstrap.css')}}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='main.css')}}" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% include "navbarhomepage.html"%}
+    {% include "withmessages.html"%} 
+    <div class="firstbox">
+        <div class="firstcolumn">
+            <ul>
+                <li>
+                    <a href="{{url_for('Home')}}" class="listitem2">Home</a> 
+                </li>
+
+                <li>
+                    <a href="{{url_for('Users')}}" class="listitem2">Users</a>
+                </li>
+
+                <li>
+                    <a href="{{url_for('Profile')}}" class="listitem3">Your Profile</a>
+                </li>
+                <li>
+                    <h4 class="card minibox">Learn More</h4>
+                </li>
+            </ul>
+        </div>
+
+        <div class="questions">
+                <div  class="questionborder">
+                    <p>
+                        <h3>
+                            Top Questions
+                        </h3>
+                    </p>
+                </div>
+                <div class="asker askerborder" >
+                    <h3 class="btn btn-info">
+                        <a href="{{url_for('askquestion')}}" class="ask">Ask a Question</a>
+                    </h3>
+                </div>
+                {% for question in questions %}
+                <div class="questioncolor">
+                    <h5><hr><a href="{{url_for('singlequestion', singlequestion_id=question.id)}}" class="questiontags">{{question.Title}}</a><hr></h5>
+                </div>
+                
+                <div class="authortag">
+                    <h5><hr>{{question.Author}}<hr></h5>
+                </div>
+                {% endfor %}
+            </div>
+            {% block content %}{% endblock %}
+    </div>
+    
+    {% include "footerhomepage.html"%}
+</body>
+</html>

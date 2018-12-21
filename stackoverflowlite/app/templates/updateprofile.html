@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stackover Flow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='bootstrap.css')}}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='main.css')}}" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% include "navbarprofile.html"%}  
+    {% include "withmessages.html"%}          
+   
+<div class="card card-body">
+    <form action="" method="POST" enctype="multipart/form-data">
+        <legend>Please kindly Update Your info {{current_user.username}} <hr> </legend>
+        <div class="formitem">
+            {{form.firstname.label(class="form-control-label")}}
+            {% if form.firstname.errors %}
+                {{form.firstname(class="form-control form-control-lg ")}}
+                <div class="invalid-feedback">
+                    {% for error in form.firstname.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor%}
+                </div>
+
+            {% else %}
+                {{form.firstname(class="form-control form-control-lg")}}
+            {% endif %}
+        </div>
+
+        <div class="formitem">
+            {{form.lastname.label(class="form-control-label")}}
+            {% if form.lastname.errors %}
+                {{form.lastname(class="form-control form-control-lg")}}
+                <div class="invalid-feedback">
+                    {% for error in form.lastname.errors%}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+
+            {% else %}
+                {{form.lastname(class="form-control form-control-lg")}}
+            {% endif%}
+        </div>
+
+        <div class="formitem">
+            {{form.country.label(class="form-control-label")}}
+            {% if form.country.errors %}
+                {{form.country(class="form-control form-control-lg")}}
+                <div class="invalid-feedback">
+                {% for error in form.country.errors%}
+                    <span>{{ error }}</span>
+                {% endfor %}
+                </div>
+
+            {% else %}
+                {{form.country(class="form-control form-control-lg")}}
+            {% endif%}
+        </div>
+
+        <div class="formitem">
+            {{form.linkedIn.label(class="form-control-label")}}
+            {% if form.linkedIn.errors %}
+                {{form.linkedIn(class="form-control form-control-lg")}}
+                <div class="invalid-feedback">
+                    {% for error in form.linkedIn.errors%}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+
+            {% else %}
+                {{form.linkedIn(class="form-control form-control-lg")}}
+            {% endif%}
+        </div>
+
+        <div class="formitem">
+            {{form.email.label(class="formitem")}}
+            {% if form.email.errors %}
+                {{form.email(class="form-control form-control-lg")}}
+                <div class="invalid-feedback">
+                {% for error in form.email.errors%}
+                    <span>{{ error }}</span>
+                {% endfor %}
+                </div>
+
+            {% else %}
+                {{form.email(class="form-control form-control-lg")}}
+            {% endif%}
+        </div>
+
+        <div class="formitem">
+            {{form.username.label(class="form-control-label")}}
+            {% if form.username.errors %}
+                {{form.username(class="form-control form-control-lg")}}
+                <div class="invalid-feedback">
+                {% for error in form.username.errors%}
+                    <span>{{ error }}</span>
+                {% endfor %}
+                </div>
+
+            {% else %}
+                {{form.username(class="form-control form-control-lg")}}
+            {% endif%}
+        </div>
+
+        <div>
+            {{form.picture.label()}}
+            {{form.picture(class="form-control-file")}}
+            {% if form.picture.errors %}
+                {% for  error in errors %}
+                    <h3 class="text-danger">{{error}}</h3><br>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        <div>
+            {{form.submit(class="btn btn-info updatebtn")}}
+        </div>
+
+    </form>
+</div>
+    {%include "footerprofile.html"%}
+</body>
+</html>

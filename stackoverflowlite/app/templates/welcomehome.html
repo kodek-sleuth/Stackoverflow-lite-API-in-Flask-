@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Stackover flow Lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='bootstrap.css')}}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='mainwelcome.css')}}" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+<div>
+{% include "navbarwelcomepage.html" %}
+</div>
+    <div>
+        {% include "flashmessages.html"%}
+        {%block content%}{% endblock %}
+    </div>
+</body>
+
+<footer>
+<div class="ninthwrapper">
+    <div>
+        <img class="image" src="{{url_for('static', filename='stacklite.png')}}">
+        <hr class="light">
+        <p>
+            About
+        </p>
+
+        <p>
+            How to use
+        </p>
+
+        <p>
+            Terms of service
+        </p>
+    </div>
+
+    <div>
+
+        <p>
+            <hr>Created by Kodek2000 <hr> 
+        </p>
+
+        <p>
+            Africell money-0794583491
+        </p>
+        <p>
+            Mugerwa Joseph Lumu @facebook
+        </p>
+        <p>
+            Whatsapp-0775644211
+        </p>
+    </div>
+
+        <div>
+            <p>
+                <hr>Menu<hr>
+            </p>
+            <p>
+                <a href="{{url_for('Login')}}">Login</a>
+            </p>
+            <p>
+                <a href="{{url_for('SignUp')}}">SignUp</a>
+            </p>
+            <p>
+                <a href="{{url_for('welcome')}}">Homepage</a>
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

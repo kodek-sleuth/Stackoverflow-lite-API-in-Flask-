@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md navbar-light bg-warning sticky-top">
+        <div class="container-fluid">
+            <div>
+                <img src="{{url_for('static', filename=('stacklite.png'))}}" class="image">
+            </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+    
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-outline-info" href="{{url_for('Login')}}" >
+                                Log in
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-outline-success" href="{{url_for('SignUp')}}" >
+                                SignUp
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                                <a class="nav-link btn btn-outline-primary" href="{{url_for('welcome')}}" >
+                                    Homepage
+                                </a>
+                            </li>
+                    </ul>
+</nav>

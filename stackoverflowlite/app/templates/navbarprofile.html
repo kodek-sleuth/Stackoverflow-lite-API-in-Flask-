@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-md navbar-light  navbarcolor">
+    <div class="navbarwrap">
+        <div>
+            <img src="{{ image_file}}" class="image1">
+            <ul class="navwrap">
+                <li class="navbarbuttons">
+                    <a href="{{url_for('Home')}}" class="profileAtags btn btn-warning">Home</a>
+                </li>
+                <li class="navbarbuttons">
+                    <a href="{{url_for('updateprofile')}}" class="profileAtags btn btn-success">Update Profile</a>
+                </li>
+                <li class="navbarbuttons">
+                    <a href="{{url_for('Logout')}}" class="profileAtags btn btn-danger">Logout</a>
+                </li>
+                <li class="navbarbuttons">
+                    <a href="{{url_for('Seequestions')}}" class="profileAtags btn btn-info">See Your Questions</a>
+                </li>
+            </ul>
+        </div>
+</nav>
