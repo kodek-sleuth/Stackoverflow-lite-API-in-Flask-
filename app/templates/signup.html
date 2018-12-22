@@ -1,0 +1,139 @@
+{%extends "welcome.html"%}
+{%block content%}
+<div class="signwrapper">
+    <div>
+        <img src="{{ url_for('static', filename=('rocket.svg'))}}">
+    </div>
+
+    <div class="form-group">
+
+        <form action="" method="POST">
+            <legend>Join Today, Persue your Talent <hr> </legend>
+            <div class="formitem">
+                {{form.firstname.label(class="form-control-label")}}
+                {% if form.firstname.errors %}
+                    {{form.firstname(class="form-control form-control-lg ")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.firstname.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor%}
+                    </div>
+
+                {% else %}
+                    {{form.firstname(class="form-control form-control-lg")}}
+                {% endif %}
+            </div>
+
+            <div class="formitem">
+                {{form.lastname.label(class="form-control-label")}}
+                {% if form.lastname.errors %}
+                    {{form.lastname(class="form-control form-control-lg")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.lastname.errors%}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                {% else %}
+                    {{form.lastname(class="form-control form-control-lg")}}
+                {% endif%}
+            </div>
+
+            <div class="formitem">
+                {{form.country.label(class="form-control-label")}}
+                {% if form.country.errors %}
+                    {{form.country(class="form-control form-control-lg")}}
+                    <div class="invalid-feedback">
+                    {% for error in form.country.errors%}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                    </div>
+    
+                {% else %}
+                    {{form.country(class="form-control form-control-lg")}}
+                {% endif%}
+            </div>
+
+            <div class="formitem">
+                {{form.linkedIn.label(class="form-control-label")}}
+                {% if form.linkedIn.errors %}
+                    {{form.linkedIn(class="form-control form-control-lg")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.linkedIn.errors%}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+    
+                {% else %}
+                    {{form.linkedIn(class="form-control form-control-lg")}}
+                {% endif%}
+            </div>
+
+            <div class="formitem">
+                {{form.email.label(class="formitem")}}
+                {% if form.email.errors %}
+                    {{form.email(class="form-control form-control-lg")}}
+                    <div class="invalid-feedback">
+                    {% for error in form.email.errors%}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                    </div>
+    
+                {% else %}
+                    {{form.email(class="form-control form-control-lg")}}
+                {% endif%}
+            </div>
+
+            <div class="formitem">
+                {{form.username.label(class="form-control-label")}}
+                {% if form.username.errors %}
+                    {{form.username(class="form-control form-control-lg")}}
+                    <div class="invalid-feedback">
+                    {% for error in form.username.errors%}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                    </div>
+    
+                {% else %}
+                    {{form.username(class="form-control form-control-lg")}}
+                {% endif%}
+            </div>
+
+            <div class="formitem">
+                {{form.password.label(class="form-control-label")}}
+                {% if form.password.errors %}
+                    {{form.password(class="form-control form-control-lg")}}
+                    <div class="invalid-feedback">
+                    {% for error in form.password.errors%}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                    </div>
+    
+                {% else %}
+                    {{form.password(class="form-control form-control-lg")}}
+                {% endif%}
+            </div>
+
+            <div class="form-group">
+                    {{form.confirmpassword.label(class="form-control-label")}}
+                    {% if form.confirmpassword.errors %}
+                        {{form.confirmpassword(class="form-control form-control-lg")}}
+                        <div class="invalid-feedback">
+                        {% for error in form.confirmpassword.errors%}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                        </div>
+        
+                    {% else %}
+                        {{form.confirmpassword(class="form-control form-control-lg")}}
+                    {% endif%}
+                </div>
+            <div>
+                {{form.submit(class="btn btn-success")}}
+                <small>Already have an account click <a href="Login" class="here">here</a></small>
+            </div>
+        </form>
+    </div>
+</div>
+
+{%endblock%}

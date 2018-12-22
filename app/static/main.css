@@ -1,0 +1,279 @@
+body
+{
+    height: 100%;
+    width: 100%;
+}
+.image
+{
+    width: 200px;
+}
+nav
+{
+    background: #17a2b8;
+}
+.firstbox
+{
+    display: grid;
+    grid-template-columns: 15% 70%;
+}
+ul li
+{
+    display: block;
+}
+ul
+{
+    padding-left: 5px;
+    padding-top: 20px;
+}
+li
+{
+    padding-bottom: 20px;
+    
+}
+.minibox
+{
+    text-align: center;
+    width: 150px;
+}
+a 
+{
+    color: rgb(31, 30, 30);
+}
+a:hover
+{
+    color: brown;
+}
+.ask
+{
+    color: aliceblue;
+}
+.ask:hover
+{
+    text-decoration: none;
+    color: brown;
+}
+.but
+{
+    padding-top: 10px;
+}
+.questions
+{
+    display: grid;
+    grid-template-columns: 70% 20%;
+    padding-top: 20px;
+    grid-auto-rows: 100px;
+    margin-left: 30px;
+}
+.questionborder
+{
+    border-bottom: 1px solid gray;
+}
+.askerborder
+{
+    border-bottom: 1px solid gray;
+}
+.firstcolumn
+{
+    display: grid;
+    grid-auto-rows: 400px;
+    border-right: 1px solid gray;
+}
+.formbody
+{
+    padding-left: 50px;
+    padding-top: 30px;
+}
+footer
+{
+    margin-top: 10px;
+    background-color: brown;
+    height: 50px;
+    
+}
+.ninthwrapper
+{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-auto-rows: 270px;
+    background: #0a999e;
+    color: rgb(31, 30, 30);
+}
+.titleup
+{
+    padding-top: 10px;
+}
+.Questionbodyandanswer
+{
+    padding-left: 10px;
+}
+.cardcolor
+{
+    background: #fd7e14;
+}
+.questiontags
+{
+    color: #dc3545;
+}
+.questiontags:hover
+{
+    color: #17a2b8;
+}
+.questiontitlecolor
+{
+    background: #20c997;
+}
+.nav-item
+{
+    margin-left: 20px;
+}
+.cardcolor1
+{
+    background: #6f42c1;
+}
+.profile
+{
+    margin-left: 20px;
+}
+.profilenav
+{
+    display: grid;
+    grid-template-columns: 10% 30% 20% 10%;
+    border-bottom: 1px solid gray;
+}
+.updateprofiletab
+{
+    margin-top: 25px;
+}
+.usernameprofile
+{
+    margin-top: 20px;
+}
+.userquestions
+{
+    margin-top: 10px;
+}
+.img-size
+{
+    height: 70px;
+    width: 70px;
+}
+.username
+{
+    margin-top: 40px;
+}
+.navbarcolor
+{
+    background: #146954;
+}
+.navbarwrap
+{
+    display: grid;
+    grid-template-columns: 100% ;
+    margin-left: 100px;
+}
+.image1
+{
+    height: 200px;
+    width:300px;
+    margin-left: 300px;
+    margin-top: 20px;
+}
+.image2
+{
+    height: 200px;
+    width:300px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.navbutton
+{
+    width: 150px;
+}
+.navwrap .navbarbuttons
+{
+    display: inline;
+}
+.navwrap
+{
+    margin-left: 150px;
+}
+.navbarbuttons
+{
+    margin-left: 30px;
+}
+.profileAtags:hover
+{
+    text-decoration: none;
+}
+.profilefooter
+{
+    background: #146954;
+}
+.welcometext
+{
+    text-align: center;
+    color: #20c997;
+}
+.profilewrapper
+{
+    display: grid;
+    grid-template-columns: 50% 40%;
+    width: 800px;
+    margin-left: 180px;
+}
+.ppbtn
+{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.profilecolor
+{
+    background:#ffc107;
+    padding-bottom: 5px;
+    padding-top: 1px;
+    padding-left: 5px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+.profileitemslist
+{
+    background: #ffc107;
+}
+.questioncard
+{
+    width: 750px;
+    height: 120px;
+    margin-left: 10px;
+}
+.updatebtn
+{
+    margin-top: 10px;
+}
+.updatebtn1
+{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.users_profile
+{
+    display: grid;
+    grid-template-columns: 60% 60%;
+    grid-auto-rows: 200px;
+   
+}
+
+.users_bio
+{
+    display: grid;
+    grid-template-columns: 35% 70%;
+    margin-left: 80px;
+    margin-top: 20px;
+    background: #a7a190;
+}
+.image_users
+{
+    height: 100px;
+    width: 100px;
+}

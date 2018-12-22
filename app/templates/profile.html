@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stackover Flow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='bootstrap.css')}}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='main.css')}}" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% include "navbarprofile.html"%}
+        <div>
+            <h3 class="welcometext"><hr><small>Welcome to your account </small> {{current_user.username}}<hr></h3>
+        </div>
+
+        <div class="profilewrapper card card-body">
+
+            <div class="">
+                <img src="{{image_file}}" class="image2">
+            <div> <a href="{{url_for('User.updateprofile')}}" class="btn btn-info updatebtn1">Upload Profile Picture</a> </div>
+            </div>
+            <div>
+                <ul class="profileitemslist card card-body">
+                    <li class="profileitem">
+                        <h6 class="profilecolor">
+                            Name: {{current_user.firstname}} {{current_user.lastname}}
+                        </h6>
+                    </li>
+
+                    <li class="profileitem">
+                        <h6 class="profilecolor">
+                            Country: {{current_user.country}}
+                        </h6>
+                    </li>
+
+                    <li class="profileitem">
+                        <h6 class="profilecolor">
+                            LinkedIn: {{current_user.linkedIn}}
+                        </h6>
+                    </li>
+
+                    <li class="profileitem">
+                        <h6 class="profilecolor">
+                            Email: {{current_user.email}}
+                        </h6>
+                    </li>
+
+                    <li class="profileitem">
+                        <h6 class="profilecolor">
+                            Username: {{current_user.username}}
+                        </h6>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {%include "footerprofile.html"%}
+</html>

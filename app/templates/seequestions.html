@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stackover Flow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='bootstrap.css')}}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='main.css')}}" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% include "navbarprofile.html"%}
+    {% include "withmessages.html"%} 
+        <div>
+            <h2 class="welcometext"><hr><small>This are the questions you have asked </small> {{current_user.username}}<hr></h2>
+        </div>
+
+        <div>
+            <div>
+                {% for i in current_user.question%}
+                    <h5 class="card card-body cardcolor questioncard">
+                        <a>{{i}}</a>
+                            <ul>
+                                <li>
+                                    <a href="{{url_for('User.deletequestion', deletequestion_title=i)}}" class="btn btn-danger">Delete</a>
+                                </li>
+                            </ul>
+                    </h5>      
+                {% endfor %}
+            </div>
+        </div>
+
+    {%include "footerprofile.html"%}
+</html>
