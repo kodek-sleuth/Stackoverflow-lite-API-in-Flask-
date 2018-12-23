@@ -15,6 +15,7 @@ def SignUp():
     if form.validate():
         hashed_pw=bcrypt.generate_password_hash(form.password.data)
         try:
+            db.create_all()
             user=User(firstname=form.firstname.data, lastname=form.lastname.data, country=form.country.data, linkedIn=form.linkedIn.data, email=form.email.data, username=form.username.data, password=hashed_pw)
             user1=User.query.filter_by(username=form.username.data).first()
             user2=User.query.filter_by(email=form.email.data).first()
