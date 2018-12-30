@@ -12,6 +12,15 @@ This is A platform where users can ask questions and expect answers to those Que
 - Users can Update their profile.
 - Users can delete the questions they ask.
 
+# INSTALLATION
+$ git clone https://github.com/kodek/Stackoverflow-lite-API
+
+    $ git clone https://github.com/kodek/Stackoverflow-lite-API
+    $ cd stackoverflow-lite
+    $ virtualenv venv
+    $ . venv/bin/activate
+    $ pip install -r requirements.txt  
+
 
 
 
