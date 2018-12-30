@@ -21,6 +21,9 @@ $ git clone https://github.com/kodek2000/Stackoverflow-lite-API
     $ . venv/bin/activate
     $ pip install -r requirements.txt  
 
+# Running the app
+- python run.py
+
 
 
 
