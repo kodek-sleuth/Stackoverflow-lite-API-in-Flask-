@@ -13,9 +13,9 @@ This is A platform where users can ask questions and expect answers to those Que
 - Users can delete the questions they ask.
 
 # INSTALLATION
-$ git clone https://github.com/kodek/Stackoverflow-lite-API
+$ git clone https://github.com/kodek2000/Stackoverflow-lite-API
 
-    $ git clone https://github.com/kodek/Stackoverflow-lite-API
+    $ git clone https://github.com/kodek2000/Stackoverflow-lite-API
     $ cd stackoverflow-lite
     $ virtualenv venv
     $ . venv/bin/activate
